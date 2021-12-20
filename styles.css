@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gerador-container,
+.results {
+  font-family: "Inter", "Roboto", "Poppins", sans-serif;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gerador-container header,
+.gerador-container main,
+.gerador-container footer,
+.results header,
+.results main,
+.results footer {
+  margin: 0 auto;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.gerador-container header,
+.results header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 5rem;
+}
+
+.gerador-container header h1,
+.results header h1 {
+  font-size: 3.5rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.gerador-container main,
+.results main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.gerador-container main .wrapper,
+.results main .wrapper {
+  position: relative;
+  width: calc(50% - 0.5rem);
+}
+
+.gerador-container main .wrapper button,
+.results main .wrapper button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: #e1e4e9;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.gerador-container main .wrapper button:hover,
+.results main .wrapper button:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.gerador-container main .wrapper button svg,
+.results main .wrapper button svg {
+  margin-left: 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.5;
+}
+
+.gerador-container main .wrapper label,
+.results main .wrapper label {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: #999;
+  font-weight: normal;
+}
+
+.gerador-container main textarea,
+.results main textarea {
+  width: 100%;
+  padding: 3.5rem 1rem 1rem;
+  resize: none;
+  font-size: 1rem;
+  font-family: "Inter", "Roboto", "Poppins", sans-serif;
+  border: 1px solid #454545;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.gerador-container main textarea:hover,
+.results main textarea:hover {
+  border: 1px solid #5b1ab2;
+}
+
+.gerador-container main textarea:focus,
+.results main textarea:focus {
+  outline: none;
+  border: 1px solid #5b1ab2;
+}
+
+.gerador-container .form,
+.results .form {
+  width: 80%;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.gerador-container .form input,
+.gerador-container .form select,
+.results .form input,
+.results .form select {
+  width: calc(50% - 0.5rem);
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #454545;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.gerador-container .form input:hover,
+.gerador-container .form select:hover,
+.results .form input:hover,
+.results .form select:hover {
+  border: 1px solid #5b1ab2;
+}
+
+.gerador-container .form input:focus,
+.gerador-container .form select:focus,
+.results .form input:focus,
+.results .form select:focus {
+  outline: none;
+  border: 1px solid #5b1ab2;
+}
+
+.gerador-container footer,
+.results footer {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.gerador-container footer button,
+.results footer button {
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+  background: #5b1ab2;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  height: 3rem;
+}
+/*# sourceMappingURL=styles.css.map */

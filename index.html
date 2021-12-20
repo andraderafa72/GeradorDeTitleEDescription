@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta name="description" content="">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <section class="gerador-container">
+    <header>
+      <h1>Gerador de Title e Description</h1>
+    </header>
+    <main class="form">
+      <input type="text" class="palavra-chave" placeholder="Palavra chave">
+      <select name="tipo" id="select-tipo">
+        <option value="Portal">Portal</option>
+        <option value="Outros">Outros</option>
+        <option value="Loja">Loja</option>
+        <option value="Blog">Blog</option>
+        <option value="Institucional">Institucional</option>
+      </select>
+    </main>
+    <footer>
+      <button type="button" onclick="gerarTitleEDescription()">Gerar Title e Description</button>
+    </footer>
+  </section>
+
+  <section class="results">
+    <main>
+      <div class="wrapper">
+        <label for="">Title</label>
+        <button type="button" onclick="copyText('title-textarea')">
+          Copiar 
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+        </button>
+        <textarea name="title" id="title-textarea" cols="30" rows="10"></textarea>
+      </div>
+
+      <div class="wrapper">
+        <label for="">Description</label>
+        <button type="button" onclick="copyText('description-textarea')">
+          Copiar código HTML
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+        </button>
+        <textarea name="description" id="description-textarea" cols="30" rows="10"></textarea>
+      </div>
+    </main>
+  </section>
+  <script src="index.js"></script>
+</body>
+
+</html>
