@@ -94,6 +94,8 @@ const SEOContent = {
   },
 };
 
+const tituloSugerido = document.querySelector('.h1-sugerido');
+
 function gerarTitleEDescription(){
   const palavraChave = document.querySelector(".palavra-chave").value;
   const tipo = document.querySelector('#select-tipo').value;
@@ -107,6 +109,7 @@ function gerarTitleEDescription(){
 
   console.log(title);
   titleTextArea.value = title
+  tituloSugerido.innerHTML = title
   descriptionTextArea.value = description
 }
 
