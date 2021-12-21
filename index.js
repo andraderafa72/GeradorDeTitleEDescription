@@ -15,8 +15,7 @@ const SEOContent = {
 
     return {
       title: titleOptions[randomInt(0, titleOptions.length)],
-      description:
-        descriptionOptions[randomInt(0, descriptionOptions.length)],
+      description: descriptionOptions[randomInt(0, descriptionOptions.length)],
     };
   },
 
@@ -34,8 +33,7 @@ const SEOContent = {
 
     return {
       title: titleOptions[randomInt(0, titleOptions.length)],
-      description:
-        descriptionOptions[randomInt(0, descriptionOptions.length)],
+      description: descriptionOptions[randomInt(0, descriptionOptions.length)],
     };
   },
   Loja: (palavraChave) => {
@@ -54,8 +52,7 @@ const SEOContent = {
 
     return {
       title: titleOptions[randomInt(0, titleOptions.length)],
-      description:
-        descriptionOptions[randomInt(0, descriptionOptions.length)],
+      description: descriptionOptions[randomInt(0, descriptionOptions.length)],
     };
   },
   Blog: (palavraChave) => {
@@ -72,8 +69,7 @@ const SEOContent = {
 
     return {
       title: titleOptions[randomInt(0, titleOptions.length)],
-      description:
-        descriptionOptions[randomInt(0, descriptionOptions.length)],
+      description: descriptionOptions[randomInt(0, descriptionOptions.length)],
     };
   },
   Institucional: (palavraChave) => {
@@ -88,37 +84,39 @@ const SEOContent = {
 
     return {
       title: titleOptions[randomInt(0, titleOptions.length)],
-      description:
-        descriptionOptions[randomInt(0, descriptionOptions.length)],
+      description: descriptionOptions[randomInt(0, descriptionOptions.length)],
     };
   },
 };
 
-const tituloSugerido = document.querySelector('.h1-sugerido');
+const tituloSugerido = document.querySelector(".h1-sugerido");
 
-function gerarTitleEDescription(){
+function gerarTitleEDescription() {
   const palavraChave = document.querySelector(".palavra-chave").value;
-  const tipo = document.querySelector('#select-tipo').value;
+  const tipo = document.querySelector("#select-tipo").value;
 
-  const titleTextArea = document.querySelector('#title-textarea')
-  const descriptionTextArea = document.querySelector('#description-textarea')
+  const titleTextArea = document.querySelector("#title-textarea");
+  const descriptionTextArea = document.querySelector("#description-textarea");
 
   console.log(palavraChave, tipo);
 
   const { title, description } = SEOContent[tipo](palavraChave);
 
   console.log(title);
-  titleTextArea.value = title
-  tituloSugerido.innerHTML = title
-  descriptionTextArea.value = description
+  titleTextArea.value = title;
+  tituloSugerido.innerHTML = title;
+  descriptionTextArea.value = description;
 }
 
-function copyText(id){
+function copyText(id) {
   const textarea = document.querySelector("#" + id).value;
 
-  const htmlCode = id === 'title-textarea' ? `` : `<meta name="description" content="${textarea}">`
+  const htmlCode =
+    id === "title-textarea"
+      ? `<title>${textarea}</title>`
+      : `<meta name="description" content="${textarea}">`;
 
   navigator.clipboard.writeText(htmlCode).then(() => {
-    alert("Texto copiado")
-  })
+    alert("Texto copiado");
+  });
 }
