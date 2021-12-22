@@ -89,12 +89,11 @@ const SEOContent = {
   },
 };
 
-const tituloSugerido = document.querySelector(".h1-sugerido");
-
 function gerarTitleEDescription() {
   const palavraChave = document.querySelector(".palavra-chave").value;
   const tipo = document.querySelector("#select-tipo").value;
 
+  const tituloSugerido = document.querySelector("#h1-textarea");
   const titleTextArea = document.querySelector("#title-textarea");
   const descriptionTextArea = document.querySelector("#description-textarea");
 
@@ -102,19 +101,28 @@ function gerarTitleEDescription() {
 
   const { title, description } = SEOContent[tipo](palavraChave);
 
-  console.log(title);
   titleTextArea.value = title;
-  tituloSugerido.innerHTML = title;
+  tituloSugerido.value = title;
   descriptionTextArea.value = description;
 }
 
 function copyText(id) {
   const textarea = document.querySelector("#" + id).value;
 
+  navigator.clipboard.writeText(textarea).then(() => {
+    alert("Texto copiado");
+  });
+}
+
+function copyHTML(id) {
+  const textarea = document.querySelector("#" + id).value;
+
   const htmlCode =
     id === "title-textarea"
       ? `<title>${textarea}</title>`
-      : `<meta name="description" content="${textarea}">`;
+      : (id === "description-textarea"
+      ? `<meta name="description" content="${textarea}">`
+      : `<h1>${textarea}</h1>`);
 
   navigator.clipboard.writeText(htmlCode).then(() => {
     alert("Texto copiado");

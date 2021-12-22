@@ -32,11 +32,27 @@
   </section>
 
   <section class="results">
-    <h1>H1 sugerido: <span class="h1-sugerido"></span></h1>
     <main>
+      <div class="wrapper title">
+        <label for="">H1 sugerido</label>
+        <button type="button" onclick="copyText('h1-textarea')">
+          Copiar
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+        </button>
+        <button type="button" onclick="copyHTML('h1-textarea')">
+          Copiar código HTML
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+        </button>
+        <textarea name="title" id="h1-textarea" cols="30" rows="10"></textarea>
+      </div>
+
       <div class="wrapper">
         <label for="">Title</label>
         <button type="button" onclick="copyText('title-textarea')">
+          Copiar
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+        </button>
+        <button type="button" onclick="copyHTML('title-textarea')">
           Copiar código HTML
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
         </button>
@@ -46,6 +62,10 @@
       <div class="wrapper">
         <label for="">Description</label>
         <button type="button" onclick="copyText('description-textarea')">
+          Copiar
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
+        </button>
+        <button type="button" onclick="copyHTML('description-textarea')">
           Copiar código HTML
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M22 6v16h-16v-16h16zm2-2h-20v20h20v-20zm-24 17v-21h21v2h-19v19h-2z"/></svg>
         </button>

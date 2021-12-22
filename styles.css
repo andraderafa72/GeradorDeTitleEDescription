@@ -72,12 +72,25 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .gerador-container main .wrapper,
 .results main .wrapper {
   position: relative;
   width: calc(50% - 0.5rem);
+}
+
+.gerador-container main .wrapper.title,
+.results main .wrapper.title {
+  width: 100%;
+  margin-bottom: .75rem;
+}
+
+.gerador-container main .wrapper.title textarea,
+.results main .wrapper.title textarea {
+  max-height: 150px;
 }
 
 .gerador-container main .wrapper button,
@@ -90,7 +103,7 @@
           align-items: center;
   position: absolute;
   top: 0.5rem;
-  right: 0.5rem;
+  right: 11rem;
   background: #e1e4e9;
   padding: 0.5rem;
   border: none;
@@ -98,6 +111,12 @@
   cursor: pointer;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+}
+
+.gerador-container main .wrapper button + button,
+.results main .wrapper button + button {
+  top: 0.5rem;
+  right: 0.5rem;
 }
 
 .gerador-container main .wrapper button:hover,
